@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>chat apps  interface</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"</script>
+	<style>
+		form {
+		    font-size: 12px;
+		    font-family: Verdana, Arial, Sans-Serif;
+		    display: inline-block;
+			}
+		#messages {
+		    font-size: 14px;
+			font-family: Garamond, Times, Serif;
+			}
+ 		#container{
+			margin:0 auto;
+			width:360px;
+			background-color:rgb(219, 111, 190);
+			height:350px;
+			width:500px;
+			padding:40px 0px 0px 80px;
+			border-radius:40px;
+			}
+
+		h2{
+  			font-family:verdana;
+  
+		   }
+		P{
+			font-family:verdana;  
+		}
+	</style>
+</head>
+<body>
+	<div id="container">
+        <h2>FAMILY  CORNER </h2>
+        <P>chat and enjoy.</P>
+          <br />
+          <br />
+        <form>
+        MESSAGE: <input type="text" name="message" value="Type your message here!">
+        </form>
+        <button>Send!</button><br/>
+        <div id="messages"></div>
+    </div>
+
+    <script>
+    	$(document).ready(function() {
+    	$('button').click(function() {
+    	var toAdd = $("input[name=message]").val();
+        $('#messages').append("<p>"+toAdd+"</p>");
+    });
+});
+    </script>
+</body>
+</html>
